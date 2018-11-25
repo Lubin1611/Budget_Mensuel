@@ -1,0 +1,125 @@
+
+h1 h2 {
+
+    font-family: "lobster", "cursive";
+    text-transform: uppercase;
+
+}
+
+body {
+
+    background-image: url("background2.jpg");
+    font-family: "Aref Ruqaa", serif;
+}
+
+.styleContainer {
+
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    width: 70%;
+    height: 140vh;
+    line-height: 50px;
+    box-shadow: 12px 12px 2px 1px black;
+    border-radius: 10px;
+    font-size: 1.3vw;
+
+}
+
+#container_recettes {
+
+    display: block;
+
+}
+
+#container_depenses {
+
+    display: none;
+
+}
+
+#container_resultat {
+
+    display: none;
+
+}
+
+#epargne {
+    margin-top : 10%;
+}
+
+
+
+#resultatDep {
+
+    position: absolute;
+    width: 200px;
+    height: 146px;
+    border: 3px solid black;
+    left: 25%;
+    top: 15%;
+
+}
+
+#resultatRev {
+
+    position: absolute;
+    width: 200px;
+    height: 146px;
+    border: 3px solid black;
+    left: 60%;
+    top: 15%;
+
+}
+
+#resultatEpargne {
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    top: 10%;
+    left: 43%;
+}
+
+#resultat {
+
+    position: absolute;
+    width: 200px;
+    height: 256px;
+    border: 3px solid black;
+    left: 43%;
+    top: 50%;
+}
+
+#boutonsRev {
+
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 35%;
+
+}
+
+#boutonsDep {
+
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 35%;
+
+}
+
+#nouvDepense {
+
+    margin-bottom: 15px;
+
+}
+
+#recommencer {
+
+    position: absolute;
+    left: 47%;
+    top: 85%
+
+}

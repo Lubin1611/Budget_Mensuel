@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Courgette|Lobster" rel="stylesheet">
+</head>
+<body>
+
+<div id="container_recettes" class="styleContainer">
+
+
+    <h1>Veuillez entrer vos recettes dans les champs ci-dessous.</h1>
+
+    <label for="entree1">Entrez votre le montant de votre salaire :</label>
+    <input type="number" id="entree1"/><br>
+
+    <label for="entree2">Entrez le montant de votre allocation logement :</label>
+    <input type="number" id="entree2"/><br>
+
+    <label for="entree3">Entrez le montant de votre RSA :</label>
+    <input type="number" id="entree3"/><br>
+
+    <label for="entree4">Entrez le montant de votre indemnité chômage :</label>
+    <input type="number" id="entree4"/><br>
+
+    <label for="entree5">Entrez le montant de vos rentes :</label>
+    <input type="number" id="entree5"/><br>
+
+    <label for="entree6">Entrez le montant de vos autres recettes :</label>
+    <input type="number" id="entree6"/><br>
+
+    <div id=boutonsRev>
+
+        <button id="envoiRecettes">Envoyez</button>
+
+        <button onclick="nouvPage()">Continuez</button>
+
+        <button onclick="nouvRevenu()">Cliquez pour ajouter un autre revenu</button>
+
+        <button onclick="resetEntree()">Reset</button>
+
+    </div>
+
+    <div id="epargne">
+        <label for="entree7">Entrez le montant de l'argent que vous voulez placer ce mois-ci:</label><br>
+        <input type="number" id="entree7"/><br>
+        <button id="enEpargne">Envoyez</button>
+    </div>
+</div>
+
+
+<div id="container_depenses" class="styleContainer">
+
+    <h1>Veuillez entrer vos dépenses dans les champs ci-dessous.</h1>
+
+    <label for="depense1">Entrez votre le montant de vos loyers et charges :</label>
+    <input type="number" id="depense1"/><br>
+
+    <label for="depense2">Entrez le montant de votre remboursement de crédit :</label>
+    <input type="number" id="depense2"/><br>
+
+    <label for="depense3">Entrez le montant de votre facture d'électricité / eau / gaz :</label>
+    <input type="number" id="depense3"/><br>
+
+    <label for="depense4">Entrez le montant de votre abonement téléphone et / ou internet :</label>
+    <input type="number" id="depense4"/><br>
+
+    <label for="depense5">Entrez le montant de votre assurance habitation :</label>
+    <input type="number" id="depense5"/><br>
+
+    <label for="depense6">Entrez le montant de votre assurance voiture :</label>
+    <input type="number" id="depense6"/><br>
+
+    <label for="depense7">Entrez le montant de votre mutuelle santé :</label>
+    <input type="number" id="depense7"/><br>
+
+    <label for="depense8">Entrez le montant de vos frais de garde :</label>
+    <input type="number" id="depense8"/><br>
+
+    <label for="depense9">Entrez le montant de vos impôts sur le revenu :</label>
+    <input type="number" id="depense9"/><br>
+
+    <label for="depense10">Entrez le montant de vos impôts locaux :</label>
+    <input type="number" id="depense10"/><br>
+
+    <h2> Dépenses courantes </h2>
+
+    <label for="depensehebdo1">Entrez le montant de votre budget courses hebdomadaire :</label>
+    <input type="number" id="depensehebdo1"/><br>
+
+    <label for="depensehebdo2">Entrez le montant de vos frais de déplacement / carburant hebdomadaire :</label>
+    <input type="number" id="depensehebdo2"/><br>
+
+    <label for="depensehebdo3">Entrez le montant de vos frais d'activités sportives et culturelles annuel :</label>
+    <input type="number" id="depensehebdo3"/><br>
+
+    <label for="depensehebdo4">Entrez le montant de votre budget pour vos sorties hebdomadaires :</label>
+    <input type="number" id="depensehebdo4"/><br>
+
+    <label for="depensehebdo5">Entrez le montant d'une autre dépense prévue sur le mois :</label>
+    <input type="number" id="depensehebdo5"/><br>
+
+    <div id=boutonsDep>
+
+        <button id="envoiDepenses">Envoyez</button>
+
+        <button onclick="finalPage()">Continuez</button>
+
+        <button onclick="retourRec()">Revenir en arrière</button>
+
+        <button onclick="nouvDepense()">Cliquez pour ajouter un autre revenu</button>
+
+        <button onclick="resetDepense()">Reset</button>
+
+    </div>
+
+</div>
+
+
+<div id="container_resultat" class="styleContainer">
+
+    <h1>Resultat de votre bilan financier</h1>
+
+    <span id="resultatRev"></span>
+
+    <span id="resultatDep"></span>
+
+    <div id="resultat"></div>
+    <button id="recommencer" onclick="refresh()">Recommencer</button>
+
+    <div id = "resultatEpargne"></div>
+
+
+
+</div>
+
+
+<script src="java.js"></script>
+</body>
+</html>
