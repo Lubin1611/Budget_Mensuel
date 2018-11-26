@@ -1,8 +1,8 @@
 // We start with our variables that will be essential for our application.
 var recettes = [];
 var depense = [];
-var petitcredit = ["Vous pourriez faire d'autre courses", "Vous pourriez aller boire un verre avec des amis", "Vous pourriez aller au cinema en famille", "Vous pourriez faire un don a une association"];
-var moyCredit = ["S'offrir un week-end dans un lieu touristique, ca vous dit ?", "Vous acheter du nouveau mobilier", "Faites vous plaisir, tout simplement"];
+var petitcredit = ["Vous pourriez faire d'autres courses", "Vous pourriez aller boire un verre avec des amis", "Vous pourriez aller au cinema en famille", "Vous pourriez faire un don a une association"];
+var moyCredit = ["S'offrir un week-end dans un lieu touristique, ca vous dit ?", "Vous pourriez vous acheter du nouveau mobilier", "Faites vous plaisir, tout simplement"];
 var groCredit = ["Vous pourriez rire au nez de votre banquier", "Vous pourriez acheter une PS4 comme Simon", "Vous pourriez lancer des billets a la foule en délire", "Vous pourriez vous habiller comme une Rock-star"];
 var sommeRecettes = 0;
 var sommeDepenses = 0;
@@ -242,7 +242,7 @@ document.getElementById("envoiDepenses").addEventListener("click", function () {
 
     console.log(sommeDepenses);
 
-    if (resultatEuros < 50) {
+    if (resultatEuros > 0 && resultatEuros < 50) {
 
         document.getElementById("resultat").innerHTML += rdmPticredit;
     }
@@ -274,6 +274,7 @@ function nouvRevenu() {
     nInput.type = "number";
     nInput.id = "nouvEntree";
     nBtn.onclick = soumettreTabRev;
+    nBtn.id = "bTnRev";
     nBtn.innerHTML = "Ajouter au calcul";
 
     document.getElementById("container_recettes").appendChild(nLabel);
@@ -296,12 +297,14 @@ function nouvDepense() {
     nInput.type = "number";
     nInput.id = "nouvDepense";
     nBtn.onclick = soumettreTabDep;
+    nBtn.id = "bTnDep";
     nBtn.innerHTML = "Ajouter au calcul";
 
     document.getElementById("container_depenses").appendChild(nLabel);
     document.getElementById("container_depenses").appendChild(nInput);
     document.getElementById("container_depenses").appendChild(nBtn);
     document.getElementById("container_depenses").appendChild(nspace);
+
 
 }
 
@@ -318,7 +321,7 @@ function soumettreTabDep() {
 
     console.log(nDepense);
 
-
+    document.getElementById("bTnDep").disabled = true;
 }
 
 
@@ -329,6 +332,9 @@ function soumettreTabRev() {
     recettes.push(nEntree);
 
     console.log(nEntree);
+
+    document.getElementById("bTnRev").disabled = true;
+
 }
 
 // And finally, we play with the displays, this will allow the user to navigate between our "containers"
@@ -350,6 +356,8 @@ function nouvPage() {
 function retourRec() {
     document.getElementById("container_depenses").style.display = "none";
     document.getElementById("container_recettes").style.display = "block";
+    document.getElementById("envoiRecettes").disabled = false;
+
 }
 
 function refresh() {
